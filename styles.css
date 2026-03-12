@@ -453,3 +453,18 @@ grid-template-columns:1fr;
 }
 
 }
+
+.tag.comeback{
+background:#3a2f4d;
+color:#d8c6ff;
+}
+
+.tag.content{
+background:#2f3a4d;
+color:#c6dcff;
+}
+
+.tag.fanproject{
+background:#3a4d2f;
+color:#d8ffc6;
+}

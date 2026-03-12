@@ -522,3 +522,35 @@ grid-template-columns:1fr;
 }
 
 }
+
+/* FIX: knoptekst leesbaar op alle pagina's */
+
+.button,
+.button:visited{
+color:#000;
+}
+
+.button.button-secondary{
+color:#fff;
+}
+
+.button.button-secondary:hover{
+color:#fff;
+}
+
+/* kleine knoppen in cards */
+
+.button.small{
+padding:6px 12px;
+font-size:.85rem;
+border-radius:8px;
+display:inline-block;
+text-decoration:none;
+}
+
+/* zorg dat tekst nooit vervaagt */
+
+.button span,
+.button{
+opacity:1;
+}

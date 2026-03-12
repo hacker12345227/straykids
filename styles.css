@@ -1,0 +1,251 @@
+:root {
+  --bg: #070b1a;
+  --bg-soft: #0f1730;
+  --card: rgba(18, 25, 49, 0.72);
+  --card-strong: rgba(18, 25, 49, 0.92);
+  --text: #eaf0ff;
+  --muted: #afbad7;
+  --accent: #65b8ff;
+  --accent-2: #7ef3d7;
+  --accent-3: #b28dff;
+  --line: rgba(255, 255, 255, 0.12);
+  --shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+  line-height: 1.65;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(126, 243, 215, 0.12), transparent 35%),
+    radial-gradient(circle at 80% 10%, rgba(101, 184, 255, 0.18), transparent 40%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 45%, #070b1a 100%);
+}
+
+.container {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(7, 11, 26, 0.78);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.95rem 0;
+}
+
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-links a[aria-current="page"],
+.nav-links a:hover {
+  color: var(--text);
+  background: rgba(126, 243, 215, 0.12);
+}
+
+.hero {
+  padding: 6rem 0 3.5rem;
+}
+
+.eyebrow {
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.79rem;
+  margin-bottom: 0.55rem;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 4.6vw, 3.55rem);
+  margin: 0.1rem 0 1rem;
+  line-height: 1.15;
+}
+
+h2 {
+  line-height: 1.2;
+}
+
+.lead,
+.hero p {
+  color: var(--muted);
+  max-width: 72ch;
+}
+
+.actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.3rem;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: #041024;
+  background: linear-gradient(135deg, var(--accent-2), #a2ffe8);
+  border-radius: 999px;
+  padding: 0.68rem 1.1rem;
+  font-weight: 800;
+  box-shadow: 0 10px 25px rgba(126, 243, 215, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-secondary {
+  background: rgba(101, 184, 255, 0.08);
+  border: 1px solid rgba(101, 184, 255, 0.45);
+  color: var(--accent);
+  box-shadow: none;
+}
+
+.section {
+  padding: 2.6rem 0 4rem;
+}
+
+.grid-cards,
+.members-grid,
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  padding-bottom: 2.8rem;
+}
+
+.card {
+  background: linear-gradient(160deg, var(--card), var(--card-strong));
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 1.05rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(126, 243, 215, 0.35);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card a {
+  color: var(--accent-2);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.highlight-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.highlight-strip article {
+  border: 1px solid rgba(178, 141, 255, 0.35);
+  background: linear-gradient(135deg, rgba(178, 141, 255, 0.15), rgba(101, 184, 255, 0.12));
+  border-radius: 14px;
+  padding: 1rem 1.1rem;
+}
+
+.discography-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: rgba(18, 25, 49, 0.78);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.discography-table th,
+.discography-table td {
+  border-bottom: 1px solid var(--line);
+  padding: 0.78rem;
+  text-align: left;
+}
+
+.discography-table th {
+  background: rgba(126, 243, 215, 0.1);
+}
+
+.discography-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  padding: 1.1rem 0;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.site-footer a {
+  color: var(--accent-2);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .nav-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    padding-top: 4.8rem;
+  }
+}

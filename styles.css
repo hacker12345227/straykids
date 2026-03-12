@@ -1,15 +1,20 @@
 :root {
-  --bg: #070b1a;
-  --bg-soft: #0f1730;
-  --card: rgba(18, 25, 49, 0.72);
-  --card-strong: rgba(18, 25, 49, 0.92);
-  --text: #eaf0ff;
-  --muted: #afbad7;
-  --accent: #65b8ff;
-  --accent-2: #7ef3d7;
-  --accent-3: #b28dff;
-  --line: rgba(255, 255, 255, 0.12);
-  --shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  --bg: #000000;
+  --bg-soft: #0a0a0a;
+
+  --card: rgba(18,18,18,0.85);
+  --card-strong: rgba(28,28,28,0.95);
+
+  --text: #f2f2f2;
+  --muted: #b8b8b8;
+
+  --accent: #ffffff;
+  --accent-2: #e3e3e3;
+  --accent-3: #7a7a7a;
+
+  --line: rgba(255,255,255,0.12);
+
+  --shadow: 0 20px 45px rgba(0,0,0,0.65);
 }
 
 * {
@@ -26,10 +31,11 @@ body {
   font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--text);
   line-height: 1.65;
+
   background:
-    radial-gradient(circle at 15% 20%, rgba(126, 243, 215, 0.12), transparent 35%),
-    radial-gradient(circle at 80% 10%, rgba(101, 184, 255, 0.18), transparent 40%),
-    linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 45%, #070b1a 100%);
+    radial-gradient(circle at 20% 10%, rgba(255,255,255,0.06), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(255,255,255,0.04), transparent 35%),
+    linear-gradient(180deg,#000 0%,#0b0b0b 50%,#000 100%);
 }
 
 .container {
@@ -41,7 +47,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(7, 11, 26, 0.78);
+  background: rgba(0,0,0,0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -80,8 +86,8 @@ body {
 
 .nav-links a[aria-current="page"],
 .nav-links a:hover {
-  color: var(--text);
-  background: rgba(126, 243, 215, 0.12);
+  color: #fff;
+  background: rgba(255,255,255,0.08);
 }
 
 .hero {
@@ -122,23 +128,28 @@ h2 {
 .button {
   display: inline-block;
   text-decoration: none;
-  color: #041024;
-  background: linear-gradient(135deg, var(--accent-2), #a2ffe8);
+  color: #000;
+
+  background: linear-gradient(135deg,#ffffff,#cfcfcf);
+
   border-radius: 999px;
   padding: 0.68rem 1.1rem;
   font-weight: 800;
-  box-shadow: 0 10px 25px rgba(126, 243, 215, 0.25);
+
+  box-shadow: 0 10px 25px rgba(255,255,255,0.15);
+
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .button:hover {
   transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(255,255,255,0.25);
 }
 
 .button-secondary {
-  background: rgba(101, 184, 255, 0.08);
-  border: 1px solid rgba(101, 184, 255, 0.45);
-  color: var(--accent);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
   box-shadow: none;
 }
 
@@ -166,7 +177,7 @@ h2 {
 
 .card:hover {
   transform: translateY(-3px);
-  border-color: rgba(126, 243, 215, 0.35);
+  border-color: rgba(255,255,255,0.35);
 }
 
 .card h2 {
@@ -174,7 +185,7 @@ h2 {
 }
 
 .card a {
-  color: var(--accent-2);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
 }
@@ -187,8 +198,8 @@ h2 {
 }
 
 .highlight-strip article {
-  border: 1px solid rgba(178, 141, 255, 0.35);
-  background: linear-gradient(135deg, rgba(178, 141, 255, 0.15), rgba(101, 184, 255, 0.12));
+  border: 1px solid rgba(255,255,255,0.25);
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
   border-radius: 14px;
   padding: 1rem 1.1rem;
 }
@@ -197,7 +208,7 @@ h2 {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
-  background: rgba(18, 25, 49, 0.78);
+  background: rgba(20,20,20,0.9);
   border-radius: 14px;
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -211,22 +222,22 @@ h2 {
 }
 
 .discography-table th {
-  background: rgba(126, 243, 215, 0.1);
+  background: rgba(255,255,255,0.08);
 }
 
 .discography-table tbody tr:nth-child(even) {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255,255,255,0.03);
 }
 
 .site-footer {
   border-top: 1px solid var(--line);
   color: var(--muted);
   padding: 1.1rem 0;
-  background: rgba(0, 0, 0, 0.18);
+  background: rgba(0,0,0,0.7);
 }
 
 .site-footer a {
-  color: var(--accent-2);
+  color: #fff;
   text-decoration: none;
   font-weight: 700;
 }
@@ -236,6 +247,7 @@ h2 {
 }
 
 @media (max-width: 760px) {
+
   .nav-wrap {
     flex-direction: column;
     align-items: flex-start;
@@ -248,4 +260,5 @@ h2 {
   .hero {
     padding-top: 4.8rem;
   }
+
 }

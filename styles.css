@@ -304,3 +304,28 @@ text-decoration:none;
 color:white;
 display:block;
 }
+
+
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  margin-left: 8px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.tag.verwacht {
+  background: #ffe08a;
+  color: #5c4b00;
+}
+
+.tag.tickets {
+  background: #b9f6ca;
+  color: #064d24;
+}
+
+.tag.canceled {
+  background: #ffb3b3;
+  color: #5a0000;
+}

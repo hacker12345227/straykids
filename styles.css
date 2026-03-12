@@ -262,3 +262,45 @@ h2 {
   }
 
 }
+
+.album-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:1.5rem;
+margin-top:2rem;
+}
+
+.album-card{
+text-align:center;
+background:linear-gradient(160deg,#111,#1b1b1b);
+border-radius:14px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,0.08);
+transition:transform .2s ease;
+}
+
+.album-card:hover{
+transform:translateY(-5px);
+}
+
+.album-card img{
+width:100%;
+display:block;
+}
+
+.album-card h2{
+margin:.6rem 0 .2rem;
+font-size:1rem;
+}
+
+.album-card p{
+color:#aaa;
+margin-bottom:1rem;
+font-size:.85rem;
+}
+
+.album-card a{
+text-decoration:none;
+color:white;
+display:block;
+}

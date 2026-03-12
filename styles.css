@@ -156,19 +156,18 @@ transition:.2s;
 
 }
 
-.button.small{
-padding:6px 12px;
-font-size:.85rem;
-border-radius:8px;
-margin-top:10px;
-display:inline-block;
-}
-
 .button:hover{
 
 transform:translateY(-2px);
 box-shadow:0 12px 30px rgba(255,255,255,.25);
 
+}
+
+.button.small{
+padding:6px 12px;
+font-size:.85rem;
+border-radius:8px;
+margin-top:10px;
 }
 
 .button-secondary{
@@ -189,7 +188,7 @@ color:#000;
 padding:2.5rem 0 4rem;
 }
 
-/* GRID LAYOUTS */
+/* GRID */
 
 .grid-cards,
 .members-grid,
@@ -228,17 +227,19 @@ border-color:rgba(255,255,255,.35);
 margin-top:0;
 }
 
-.card a{
+/* LINKS IN CARDS (maar NIET knoppen) */
+
+.card a:not(.button){
 color:#fff;
 font-weight:600;
 text-decoration:none;
 }
 
-.card a:hover{
+.card a:not(.button):hover{
 text-decoration:underline;
 }
 
-/* EVENT LAYOUT (TOUR PAGE) */
+/* EVENT LAYOUT */
 
 .event-header{
 
@@ -265,56 +266,6 @@ margin:.3rem 0 1rem;
 
 }
 
-.ticket-link{
-
-display:inline-block;
-
-background:#fff;
-color:#000;
-
-padding:.45rem .9rem;
-border-radius:6px;
-
-font-size:.85rem;
-font-weight:700;
-
-text-decoration:none;
-
-transition:.2s;
-
-}
-
-.ticket-link:hover{
-background:#d9d9d9;
-}
-
-/* NEWS SOURCE LINK */
-
-.news-source{
-
-display:inline-block;
-margin-top:10px;
-
-padding:6px 12px;
-
-background:#fff;
-color:#000;
-
-font-size:.85rem;
-font-weight:700;
-
-border-radius:6px;
-
-text-decoration:none;
-
-transition:.2s;
-
-}
-
-.news-source:hover{
-background:#d9d9d9;
-}
-
 /* TAGS */
 
 .tag{
@@ -329,7 +280,7 @@ letter-spacing:.02em;
 
 }
 
-/* TOUR STATUS */
+/* TOUR TAGS */
 
 .tag.verwacht{
 background:#f3e5ab;
@@ -361,6 +312,33 @@ color:#c6dcff;
 .tag.fanproject{
 background:#3a4d2f;
 color:#d8ffc6;
+}
+
+/* NEWS SOURCE BUTTON */
+
+.news-source{
+
+display:inline-block;
+margin-top:10px;
+
+padding:6px 12px;
+
+background:#fff;
+color:#000;
+
+font-size:.85rem;
+font-weight:700;
+
+border-radius:6px;
+
+text-decoration:none;
+
+transition:.2s;
+
+}
+
+.news-source:hover{
+background:#d9d9d9;
 }
 
 /* HOMEPAGE HIGHLIGHTS */
@@ -429,7 +407,6 @@ background:rgba(255,255,255,.03);
 
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-
 gap:1.5rem;
 margin-top:2rem;
 
@@ -526,36 +503,4 @@ padding-top:4.8rem;
 grid-template-columns:1fr;
 }
 
-}
-
-/* FIX: knoptekst leesbaar op alle pagina's */
-
-.button,
-.button:visited{
-color:#000;
-}
-
-.button.button-secondary{
-color:#fff;
-}
-
-.button.button-secondary:hover{
-color:#fff;
-}
-
-/* kleine knoppen in cards */
-
-.button.small{
-padding:6px 12px;
-font-size:.85rem;
-border-radius:8px;
-display:inline-block;
-text-decoration:none;
-}
-
-/* zorg dat tekst nooit vervaagt */
-
-.button span,
-.button{
-opacity:1;
 }

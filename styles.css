@@ -1,23 +1,23 @@
 :root {
 
-  --bg:#000;
-  --bg-soft:#0b0b0b;
+--bg:#000;
+--bg-soft:#0b0b0b;
 
-  --card:#111;
-  --card-strong:#1a1a1a;
+--card:#111;
+--card-strong:#1a1a1a;
 
-  --text:#f5f5f5;
-  --muted:#a9a9a9;
+--text:#f5f5f5;
+--muted:#a9a9a9;
 
-  --accent:#ffffff;
+--accent:#ffffff;
 
-  --line:rgba(255,255,255,.12);
+--line:rgba(255,255,255,.12);
 
-  --shadow:0 20px 45px rgba(0,0,0,.65);
+--shadow:0 20px 45px rgba(0,0,0,.65);
 
 }
 
-/* base */
+/* BASE */
 
 *{
 box-sizing:border-box;
@@ -46,7 +46,7 @@ width:min(1120px,92vw);
 margin:0 auto;
 }
 
-/* header */
+/* HEADER */
 
 .site-header{
 
@@ -66,7 +66,6 @@ border-bottom:1px solid var(--line);
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 padding:.95rem 0;
 
 }
@@ -110,17 +109,20 @@ background:rgba(255,255,255,.08);
 
 }
 
-/* hero */
+/* HERO */
 
 .hero{
 padding:6rem 0 3.5rem;
 }
 
-h1{
+.hero p{
+color:var(--muted);
+max-width:70ch;
+}
 
+h1{
 font-size:clamp(2.1rem,4.6vw,3.4rem);
 margin:.2rem 0 1rem;
-
 }
 
 h2{
@@ -133,7 +135,7 @@ color:var(--muted);
 max-width:70ch;
 }
 
-/* buttons */
+/* BUTTONS */
 
 .button{
 
@@ -161,13 +163,20 @@ box-shadow:0 12px 30px rgba(255,255,255,.25);
 
 }
 
-/* sections */
+.button-secondary{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.3);
+color:#fff;
+box-shadow:none;
+}
+
+/* SECTIONS */
 
 .section{
 padding:2.5rem 0 4rem;
 }
 
-/* grid */
+/* GRID LAYOUTS */
 
 .grid-cards,
 .members-grid,
@@ -179,7 +188,7 @@ gap:1.2rem;
 
 }
 
-/* cards */
+/* CARDS */
 
 .card{
 
@@ -202,14 +211,27 @@ border-color:rgba(255,255,255,.35);
 
 }
 
-/* event layout */
+.card h2{
+margin-top:0;
+}
+
+.card a{
+color:#fff;
+font-weight:600;
+text-decoration:none;
+}
+
+.card a:hover{
+text-decoration:underline;
+}
+
+/* EVENT LAYOUT (TOUR PAGE) */
 
 .event-header{
 
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 margin-bottom:.5rem;
 
 }
@@ -218,7 +240,6 @@ margin-bottom:.5rem;
 
 font-weight:600;
 color:#ddd;
-
 margin-top:.4rem;
 
 }
@@ -227,7 +248,6 @@ margin-top:.4rem;
 
 color:var(--muted);
 font-size:.9rem;
-
 margin:.3rem 0 1rem;
 
 }
@@ -255,7 +275,34 @@ transition:.2s;
 background:#d9d9d9;
 }
 
-/* tags */
+/* NEWS SOURCE LINK */
+
+.news-source{
+
+display:inline-block;
+margin-top:10px;
+
+padding:6px 12px;
+
+background:#fff;
+color:#000;
+
+font-size:.85rem;
+font-weight:700;
+
+border-radius:6px;
+
+text-decoration:none;
+
+transition:.2s;
+
+}
+
+.news-source:hover{
+background:#d9d9d9;
+}
+
+/* TAGS */
 
 .tag{
 
@@ -269,35 +316,47 @@ letter-spacing:.02em;
 
 }
 
-.tag.verwacht{
+/* TOUR STATUS */
 
+.tag.verwacht{
 background:#f3e5ab;
 color:#544400;
-
 }
 
 .tag.tickets{
-
 background:#c8f7c5;
 color:#084b12;
-
 }
 
 .tag.canceled{
-
 background:#f5bcbc;
 color:#5a0000;
-
 }
 
-/* highlight */
+/* NEWS TAGS */
+
+.tag.comeback{
+background:#3a2f4d;
+color:#d8c6ff;
+}
+
+.tag.content{
+background:#2f3a4d;
+color:#c6dcff;
+}
+
+.tag.fanproject{
+background:#3a4d2f;
+color:#d8ffc6;
+}
+
+/* HOMEPAGE HIGHLIGHTS */
 
 .highlight-strip{
 
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:1rem;
-
 margin-bottom:3rem;
 
 }
@@ -306,15 +365,18 @@ margin-bottom:3rem;
 
 border:1px solid rgba(255,255,255,.2);
 
-background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.04));
+background:linear-gradient(
+135deg,
+rgba(255,255,255,.08),
+rgba(255,255,255,.04)
+);
 
 border-radius:14px;
-
 padding:1rem;
 
 }
 
-/* discography table */
+/* DISCOGRAPHY TABLE */
 
 .discography-table{
 
@@ -348,7 +410,7 @@ background:rgba(255,255,255,.08);
 background:rgba(255,255,255,.03);
 }
 
-/* albums */
+/* ALBUM GRID */
 
 .album-grid{
 
@@ -395,7 +457,6 @@ font-size:1rem;
 
 color:#aaa;
 margin-bottom:1rem;
-
 font-size:.85rem;
 
 }
@@ -406,7 +467,7 @@ color:white;
 display:block;
 }
 
-/* footer */
+/* FOOTER */
 
 .site-footer{
 
@@ -431,7 +492,7 @@ text-decoration:none;
 text-decoration:underline;
 }
 
-/* mobile */
+/* MOBILE */
 
 @media (max-width:760px){
 
@@ -452,45 +513,4 @@ padding-top:4.8rem;
 grid-template-columns:1fr;
 }
 
-}
-
-.tag.comeback{
-background:#3a2f4d;
-color:#d8c6ff;
-}
-
-.tag.content{
-background:#2f3a4d;
-color:#c6dcff;
-}
-
-.tag.fanproject{
-background:#3a4d2f;
-color:#d8ffc6;
-}
-
-.news-source{
-
-display:inline-block;
-
-margin-top:10px;
-
-padding:6px 12px;
-
-background:#fff;
-color:#000;
-
-font-size:.85rem;
-font-weight:700;
-
-border-radius:6px;
-
-text-decoration:none;
-
-transition:.2s;
-
-}
-
-.news-source:hover{
-background:#d9d9d9;
 }
